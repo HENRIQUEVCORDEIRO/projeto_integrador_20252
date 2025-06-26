@@ -1,0 +1,22 @@
+function menu() {
+  while (true) {
+    console.log("\nSISTEMA DE TRIAGEM");
+    console.log("1 - Cadastrar paciente");
+    console.log("2 - Atender paciente");
+    console.log("3 - Ver filas");
+    console.log("4 - Ver tempos de espera");
+    console.log("5 - Sair");
+    const option = prompt("Escolha uma opção: ");
+
+    switch (option) {
+      case "1": registerPatient(); break;
+      case "2": servePatient(); break;
+      case "3": seeLines(); break;
+      case "4": checkTimes(); break;
+      case "5": console.log("Encerrando..."); return;
+      default: console.log("Opção inválida.");
+    }
+  }
+}
+
+menu();
